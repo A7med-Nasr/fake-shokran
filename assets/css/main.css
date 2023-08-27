@@ -1,0 +1,896 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --brand-color: rgb(255, 165, 0);
+    --main-bg: rgb(243, 245, 250);
+    --second-bg: rgb(55, 81, 126);
+}
+
+a {
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 65%;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header h2 {
+    font-weight: bold;
+    color: rgb(55, 81, 126);
+    font-size: 32px;
+    position: relative;
+    text-align: center;
+}
+
+.header h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 120px;
+    top: 150%;
+    left: 46%;
+    background-color: rgb(221, 221, 221);
+}
+
+.header h2::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 55px;
+    top: 148%;
+    left: 48%;
+    background-color: var(--brand-color);
+}
+
+.header p {
+    text-align: center;
+    padding: 50px 260px;
+    line-height: 25px;
+    color: rgb(68, 68, 68);
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+header {
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 0 10px black;
+    position: fixed;
+    background-color: #fff;
+    z-index: 6545;
+}
+
+header .row .logo img {
+    width: 35px;
+}
+
+header .row .toggler {
+    font-size: 25px;
+    transition: all 0.3s;
+    display: none;
+}
+
+header .row .toggler:hover {
+    color: var(--brand-color);
+}
+
+header .row .nav-btn ul li {
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+header .row .nav-btn ul li a:hover {
+    color: var(--brand-color);
+}
+
+header .row .nav-btn ul li a {
+    color: black;
+    transition: all 0.5s;
+}
+
+header .row .nav-btn ul button {
+    border: 2px solid var(--brand-color);
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 40px;
+    transform: translateY(-10px);
+    margin-top: 8px;
+}
+
+header .row .nav-btn ul button a {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+}
+
+header .row .nav-btn ul button a i {
+    color: var(--brand-color);
+}
+
+main {
+    padding: 150px 0px 60px;
+}
+
+main .row .caption {
+    width: 50%;
+    margin-top: 80px;
+    font-family: 'Jost', sans-serif;
+    padding-bottom: 50px;
+}
+
+main .row .caption h2 {
+    font-size: 48px;
+    font-weight: 700;
+}
+
+main .row .caption p {
+    font-size: 23px;
+    font-weight: 400;
+    color: rgba(32, 32, 32, 0.6);
+    margin: 10px 0 50px 0;
+}
+
+main .row .caption button {
+    padding: 15px 40px;
+    border: none;
+    background-color: var(--brand-color);
+    border-radius: 50px;
+    transition: all 0.3s;
+}
+
+main .row .caption button:hover {
+    background-color: rgb(32, 157, 216);
+}
+
+main .row .caption button a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+main .row .logo {
+    width: 46%;
+}
+
+main .row .logo img {
+    width: 100%;
+}
+
+.clients {
+    width: 100%;
+    background-color: var(--main-bg);
+    padding: 25px 0;
+}
+
+.clients .row img {
+    width: 80px;
+    filter: grayscale(1);
+    transition: all 0.3s;
+}
+
+.clients .row img:hover {
+    filter: none;
+    scale: 1.2;
+}
+
+.clients .row img.he {
+    height: 50px;
+    margin-top: 15px;
+}
+
+section.how {
+    padding: 150px 0 0 0;
+}
+
+section.how .row {
+    margin-top: 80px;
+}
+
+section.how .row .img {
+    width: 40%;
+}
+
+section.how .row .img img {
+    width: 450px;
+}
+
+section.how .row .use-caption {
+    width: 50%;
+}
+
+section.how .row .use-caption p {
+    color: rgb(68, 68, 68);
+    font-family: sans-serif;
+    margin-bottom: 20px;
+    line-height: 22px;
+}
+
+section.how .row .use-caption button {
+    padding: 15px 30px;
+    border-radius: 5px;
+    background-color: white;
+    border: 2px solid var(--brand-color);
+    transition: all 0.2s;
+}
+
+section.how .row .use-caption button:hover {
+    background-color: var(--brand-color);
+}
+
+section.how .row .use-caption button:hover a {
+    color: white;
+}
+
+section.how .row .use-caption button a {
+    color: var(--brand-color);
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-weight: bolder;
+}
+
+section.who {
+    padding: 150px 0 100px;
+}
+
+section.who .row {
+    margin-top: 80px;
+}
+
+section.who p {
+    color: rgb(68, 68, 68);
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+section.who .row .left {
+    width: 50%;
+}
+
+section.who .row .left p {
+    margin: 15px 0;
+}
+
+section.who .row .left p i {
+    color: var(--brand-color);
+    padding-right: 5px;
+}
+
+section.who .row .right {
+    width: 50%;
+}
+
+section.who .row .right p {
+    margin: 15px 0 30px 0;
+}
+
+section.who .row .right button {
+    padding: 15px 35px;
+    border: 2px solid var(--brand-color);
+    background-color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+section.who .row .right button:hover {
+    background-color: var(--brand-color);
+}
+
+section.who .row .right button:hover a {
+    color: white;
+}
+
+section.who .row .right button a {
+    color: var(--brand-color);
+    font-size: 15px;
+}
+
+section.categories {
+    padding: 100px 0;
+    background-color: var(--main-bg);
+}
+
+section.categories .container {
+    margin-top: 80px;
+}
+
+section.categories .row .card {
+    width: 33%;
+    position: relative;
+    transition: all 0.3s;
+}
+
+section.categories .row .card:hover {
+    transform: translateY(-10px);
+}
+
+section.categories .row .card img {
+    width: 100%;
+    height: 240px;
+    padding: 5px;
+}
+
+section.categories .row .card h4 {
+    position: absolute;
+    width: 97%;
+    padding: 8px;
+    text-align: center;
+    background-color: var(--brand-color);
+    top: 15%;
+    left: 1.5%;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+section.brands {
+    padding: 100px 0;
+    background-color: var(--main-bg);
+}
+
+section.brands .row img {
+    width: 250px;
+}
+
+section.contact {
+    padding: 100px 0;
+}
+
+section.contact .row .contact-img {
+    width: 50%;
+}
+
+section.contact .row .contact-img img {
+    width: 100%;
+    height: 400px;
+}
+
+section.contact .row .send-message {
+    width: 50%;
+    border: 3px solid var(--brand-color);
+    border-left: none;
+    border-right: none;
+    padding: 20px 0;
+    box-shadow: 0px 0px 20px rgb(171, 169, 169);
+}
+
+section.contact .row .send-message .row {
+    width: 100%;
+}
+
+section.contact .row .send-message .row label,
+section.contact .row .send-message .row input,
+section.contact .row .send-message .row textarea {
+    margin: 10px;
+}
+
+section.contact .row .send-message .row .name {
+    width: 45%;
+}
+
+section.contact .row .send-message .row .mail {
+    width: 45%;
+}
+
+section.contact .row .send-message .row input {
+    height: 30px;
+    width: 90%;
+}
+
+section.contact .row .send-message .row textarea {
+    width: 100%;
+    height: 170px;
+}
+
+section.contact .row .send-message button {
+    padding: 15px;
+    background-color: var(--brand-color);
+    border: none;
+    border-radius: 10px;
+    width: 30%;
+    margin-left: 35%;
+    margin-top: 15px;
+}
+
+section.contact .row .send-message button a {
+    color: white;
+}
+
+section.contact .caption {
+    margin-top: 100px;
+}
+
+section.contact .caption h3 {
+    font-weight: bold;
+    color: rgb(55, 81, 126);
+    font-size: 16px;
+}
+
+section.contact .caption p {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: rgb(68, 68, 68);
+    margin: 20px 0;
+    width: 100%;
+}
+
+section.contact .caption .social ul li {
+    margin-right: 5px;
+    background-color: var(--brand-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+section.contact .caption .social ul li a {
+    color: white;
+}
+
+footer {
+    padding: 50px 0;
+    background-color: var(--second-bg);
+    color: white;
+    font-size: 14px;
+}
+
+footer .row .copy {
+    width: 50%;
+}
+
+footer .row .copy p {
+    margin: 10px 0;
+}
+
+footer .row .copy p span {
+    font-weight: bold;
+}
+
+footer .row .mail {
+    width: 50%;
+}
+
+footer .row .mail p {
+    margin: 10px 0;
+}
+
+footer .row .mail p a {
+    color: var(--brand-color);
+}
+
+@media(max-width:950px) {
+    header .row .toggler {
+        display: block;
+        margin-left: auto;
+        font-size: 35px;
+    }
+
+    header .row .logo img {
+        width: 45px;
+    }
+
+    header .row .nav-btn ul {
+        display: none;
+    }
+
+    main .row {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
+    main .row .caption {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    main .row .caption p {
+        margin: 20px 0 30px 0;
+    }
+
+    main .row .caption button {
+        padding: 20px 50px;
+        border: none;
+    }
+
+    main .row .caption button a {
+        color: white;
+        font-size: 19px;
+    }
+
+    main .row .logo {
+        width: 100%;
+    }
+
+    main .row .logo img {
+        width: 60%;
+    }
+
+    .clients {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .clients .row {
+        width: 99%;
+        padding: 0px 100px;
+    }
+
+    .clients .row img {
+        width: 26%;
+        padding: 25px;
+        height: 150px;
+        margin-bottom: 50px;
+    }
+
+    .clients .row img.he {
+        height: 100px;
+        margin-top: 30px;
+    }
+
+    .row {
+        width: 80%;
+        margin: auto;
+    }
+
+    .header h2 {
+        font-size: 37px;
+    }
+
+    .header h2::before {
+        width: 130px;
+        left: 42%;
+    }
+
+    .header h2::after {
+        top: 148%;
+        left: 46%;
+    }
+
+    .header p {
+        padding: 80px;
+        font-size: 19px;
+    }
+
+    section.how {
+        padding: 80px 0 0 0;
+        text-align: center;
+    }
+
+    section.how .row .img {
+        width: 100%;
+    }
+
+    section.how .row .img img {
+        width: 100%;
+    }
+
+    section.how .row .use-caption {
+        margin: 20px 0;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    section.how .row .use-caption p {
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    section.how .row .use-caption button a {
+        font-size: 17px;
+    }
+
+    section.who {
+        padding: 80px 0 80px;
+    }
+
+    section.who p {
+        font-size: 20px;
+    }
+
+    section.who .row .left {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    section.who .row .right {
+        width: 100%;
+    }
+
+    section.who .row .right button a {
+        font-size: 17px;
+    }
+
+    section.categories .row {
+        width: 98%;
+    }
+
+    section.categories .row .card {
+        width: 33%;
+        position: relative;
+        transition: all 0.3s;
+    }
+
+    section.categories .row .card:hover {
+        transform: translateY(-10px);
+    }
+
+    section.categories .row .card h4 {
+        font-size: 20px;
+    }
+
+    section.brands {
+        padding: 50px 0;
+    }
+
+    section.brands .row {
+        width: 90%;
+    }
+
+    section.brands .row img {
+        width: 32%;
+        border-radius: 20px;
+    }
+
+    section.contact .row .contact-img {
+        width: 100%;
+    }
+
+    section.contact .row .send-message {
+        width: 100%;
+    }
+
+    section.contact .row .send-message .row label,
+    section.contact .row .send-message .row input,
+    section.contact .row .send-message .row textarea {
+        margin: 20px;
+    }
+
+    section.contact .row .send-message .row .name,
+    section.contact .row .send-message .row .mail {
+        width: 50%;
+    }
+
+    section.contact .row .send-message .row input {
+        height: 40px;
+    }
+
+    section.contact .row .send-message button {
+        padding: 20px;
+    }
+
+    section.contact .row .send-message button a {
+        color: white;
+        font-size: 20px;
+    }
+
+    section.contact .caption {
+        margin-top: 70px;
+    }
+
+    section.contact .caption h3 {
+        font-size: 22px;
+    }
+
+    section.contact .caption p {
+        font-size: 19px;
+    }
+
+    section.contact .caption .social ul li {
+        padding: 12px;
+        width: 45px;
+        height: 45px;
+    }
+
+    section.contact .caption .social ul li a {
+        font-size: 18px;
+    }
+
+    footer {
+        font-size: 17px;
+    }
+}
+
+@media(max-width:600px) {
+
+    header .row .toggler {
+        margin-right: 20px;
+        font-size: 30px;
+    }
+
+    header .row .logo img {
+        width: 35px;
+    }
+
+    main .row .caption button {
+        padding: 15px 40px;
+    }
+
+    main .row .caption button a {
+        font-size: 18px;
+    }
+
+    main .row .logo {
+        width: 100%;
+    }
+
+    main .row .logo img {
+        width: 70%;
+    }
+
+    main .row .caption h2 {
+        font-size: 32px;
+    }
+
+    main .row .caption p {
+        font-size: 20px;
+    }
+
+    .clients .row {
+        width: 70%;
+        padding: 0px 0px;
+    }
+
+    .clients .row img {
+        width: 50%;
+        padding: 30px;
+        margin-bottom: 10px;
+    }
+
+    .clients .row img.he {
+        height: 120px;
+        margin-top: 15px;
+    }
+
+    .row {
+        width: 90%;
+        margin: auto;
+    }
+
+    .header h2 {
+        font-size: 30px;
+    }
+
+    .header h2::before {
+        width: 120px;
+        left: 34%;
+    }
+
+    .header h2::after {
+        top: 147%;
+        left: 42%;
+    }
+
+    .header p {
+        padding: 40px 5px;
+        font-size: 17px;
+    }
+
+    section.how {
+        padding: 50px 0 0 0;
+    }
+
+    section.how .row .use-caption {
+        font-size: 17px;
+    }
+
+    section.how .row .use-caption button a {
+        font-size: 15px;
+    }
+
+    section.who {
+        padding: 50px 0 80px;
+    }
+
+    section.who p {
+        font-size: 17px;
+    }
+
+    section.who .row .left {
+        margin-bottom: 0px;
+    }
+
+    section.who .row .right button a {
+        font-size: 15px;
+    }
+
+    section.categories .row {
+        width: 90%;
+    }
+
+    section.categories .row .card {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    section.categories .row .card:hover {
+        transform: translateY(-5px);
+    }
+
+    section.categories .row .card h4 {
+        font-size: 18px;
+    }
+
+    section.brands {
+        padding: 0px;
+    }
+
+    section.brands .row {
+        width: 90%;
+    }
+
+    section.brands .row img {
+        width: 33%;
+    }
+
+    section.contact .row .send-message .row .name,
+    section.contact .row .send-message .row .mail {
+        width: 100%;
+    }
+
+    section.contact .row .send-message .row input {
+        height: 50px;
+    }
+
+    section.contact .row .send-message button {
+        padding: 10px;
+        width: 40%;
+        margin-left: 30%;
+    }
+
+    section.contact .row .send-message button a {
+        font-size: 16px;
+    }
+
+    section.contact .caption {
+        margin-top: 50px;
+    }
+
+    section.contact .caption h3 {
+        font-size: 20px;
+    }
+
+    section.contact .caption p {
+        font-size: 17px;
+    }
+
+    section.contact .caption .social ul li {
+        width: 40px;
+        height: 40px;
+    }
+
+    footer {
+        font-size: 15px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    footer .row {
+        width: 90%;
+    }
+
+    footer .row .copy,
+    footer .row .mail {
+        width: 100%;
+    }
+}

@@ -1,0 +1,428 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --brand-color: rgb(255, 165, 0);
+    --main-bg: rgb(243, 245, 250);
+    --second-bg: rgb(55, 81, 126);
+}
+
+a {
+    text-decoration: none;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 65%;
+    margin: auto;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+}
+
+button {
+    cursor: pointer;
+}
+
+.header h2 {
+    font-weight: bold;
+    color: rgb(55, 81, 126);
+    font-size: 32px;
+    position: relative;
+    text-align: center;
+}
+
+.header h2::before {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 120px;
+    top: 150%;
+    left: 46%;
+    background-color: rgb(221, 221, 221);
+}
+
+.header h2::after {
+    content: "";
+    position: absolute;
+    height: 4px;
+    width: 55px;
+    top: 148%;
+    left: 48%;
+    background-color: var(--brand-color);
+}
+
+.header p {
+    text-align: center;
+    padding: 50px 260px;
+    line-height: 25px;
+    color: rgb(68, 68, 68);
+    font-family: sans-serif;
+    font-weight: 500;
+}
+
+header {
+    width: 100%;
+    padding: 15px 0;
+    box-shadow: 0 0 10px black;
+    position: fixed;
+    background-color: #fff;
+    z-index: 6545;
+}
+
+header .row .logo img {
+    width: 35px;
+}
+
+header .row .toggler {
+    font-size: 25px;
+    transition: all 0.3s;
+    display: none;
+}
+
+header .row .toggler:hover {
+    color: var(--brand-color);
+}
+
+header .row .nav-btn ul li {
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+header .row .nav-btn ul li a:hover {
+    color: var(--brand-color);
+}
+
+header .row .nav-btn ul li a {
+    color: black;
+    transition: all 0.5s;
+}
+
+header .row .nav-btn ul button {
+    border: 2px solid var(--brand-color);
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 40px;
+    transform: translateY(-10px);
+    margin-top: 8px;
+}
+
+header .row .nav-btn ul button a {
+    font-weight: bold;
+    font-size: 14px;
+    color: black;
+}
+
+header .row .nav-btn ul button a i {
+    color: var(--brand-color);
+}
+
+main .main-header {
+    width: 100%;
+    background-color: var(--main-bg);
+    padding: 90px 0 10px 0;
+}
+
+main .main-header .main-caption {
+    width: 65%;
+    margin: auto;
+}
+
+main .main-header .main-caption p {
+    font-size: 15px;
+}
+
+main .main-header .main-caption p a {
+    color: var(--brand-color);
+}
+
+main .main-header .main-caption p span {
+    color: var(--second-bg);
+    padding: 0 5px;
+}
+
+main .main-header .main-caption h2 {
+    color: var(--second-bg);
+    font-size: 30px;
+    font-weight: 900;
+}
+
+section.offers {
+    padding: 90px 0;
+}
+
+section.offers .row .card {
+    width: 33.3%;
+    border: 1px solid rgb(205, 205, 205);
+}
+
+section.offers .row .card img {
+    width: 100%;
+}
+
+section.offers .row .card .card-caption {
+    padding: 20px;
+}
+
+section.offers .row .card .card-caption h3 {
+    font-size: 19px;
+    color: #212529;
+}
+
+section.offers .row .card .card-caption p {
+    font-size: 15px;
+    color: #696b6e;
+    margin: 20px 0;
+}
+
+section.offers .row .card .card-caption button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 10px;
+}
+
+section.offers .row .card .card-caption button a {
+    color: white;
+    font-size: 15px;
+}
+
+section.offers .caption {
+    margin-top: 100px;
+}
+
+section.offers .caption h3 {
+    font-weight: bold;
+    color: rgb(55, 81, 126);
+    font-size: 16px;
+}
+
+section.offers .caption p {
+    font-family: sans-serif;
+    font-size: 14px;
+    color: rgb(68, 68, 68);
+    margin: 20px 0;
+    width: 100%;
+}
+
+section.offers .caption .social ul li {
+    margin-right: 5px;
+    background-color: var(--brand-color);
+    padding: 10px;
+    text-align: center;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+}
+
+section.offers .caption .social ul li a {
+    color: white;
+}
+
+footer {
+    padding: 50px 0;
+    background-color: var(--second-bg);
+    color: white;
+    font-size: 14px;
+}
+
+footer .row .copy {
+    width: 50%;
+}
+
+footer .row .copy p {
+    margin: 10px 0;
+}
+
+footer .row .copy p span {
+    font-weight: bold;
+}
+
+footer .row .mail {
+    width: 50%;
+}
+
+footer .row .mail p {
+    margin: 10px 0;
+}
+
+footer .row .mail p a {
+    color: var(--brand-color);
+}
+
+@media(max-width:950px) {
+    header .row .toggler {
+        display: block;
+        margin-left: auto;
+        font-size: 35px;
+    }
+
+    header .row .logo img {
+        width: 45px;
+    }
+
+    header .row .nav-btn ul {
+        display: none;
+    }
+
+    main .main-header .main-caption p {
+        font-size: 20px;
+    }
+
+
+    main .main-header .main-caption h2 {
+        font-size: 32px;
+    }
+
+    section.offers {
+        padding: 70px 0;
+    }
+
+    section.offers .row {
+        width: 90%;
+    }
+
+    section.offers .row .card {
+        width: 32%;
+    }
+
+    section.offers .row .card .card-caption h3 {
+        font-size: 22px;
+    }
+
+    section.offers .row .card .card-caption p {
+        font-size: 18px;
+    }
+
+    section.offers .row .card .card-caption button {
+        padding: 15px 20px;
+    }
+
+    section.offers .row .card .card-caption button a {
+        font-size: 18px;
+    }
+
+    section.offers .caption {
+        margin-top: 60px;
+    }
+
+    section.offers .caption h3 {
+        font-size: 22px;
+    }
+
+    section.offers .caption p {
+        font-size: 18px;
+    }
+
+    section.offers .caption .social ul li {
+        padding: 12px;
+        width: 45px;
+        height: 45px;
+    }
+
+    footer {
+        padding: 30px 0;
+        font-size: 18px;
+    }
+
+    footer .row {
+        width: 90%;
+    }
+
+}
+
+@media(max-width:600px) {
+    header .row .toggler {
+        font-size: 30px;
+    }
+
+    header .row .logo img {
+        width: 35px;
+    }
+
+    main .main-header {
+        padding: 75px 0 10px 0;
+    }
+
+    main .main-header .main-caption p {
+        font-size: 15px;
+    }
+
+    main .main-header .main-caption h2 {
+        font-size: 25px;
+    }
+
+    section.offers {
+        padding: 50px 0;
+    }
+
+    section.offers .row {
+        width: 90%;
+    }
+
+    section.offers .row .card {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    section.offers .row .card .card-caption h3 {
+        font-size: 22px;
+    }
+
+    section.offers .row .card .card-caption p {
+        font-size: 16px;
+    }
+
+    section.offers .row .card .card-caption button {
+        padding: 10px 15px;
+    }
+
+    section.offers .row .card .card-caption button a {
+        font-size: 15px;
+    }
+
+    section.offers .caption {
+        margin-top: 30px;
+    }
+
+    section.offers .caption h3 {
+        font-size: 20px;
+    }
+
+    section.offers .caption p {
+        font-size: 16px;
+    }
+
+    section.offers .caption .social ul li {
+        padding: 10px;
+        width: 35px;
+        height: 35px;
+    }
+
+    footer {
+        padding: 30px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    footer .row {
+        width: 90%;
+    }
+
+    footer .row .copy,
+    footer .row .mail {
+        width: 100%;
+    }
+}
